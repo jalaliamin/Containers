@@ -6,7 +6,8 @@ ARG settScript="settScript.sh"
 
 COPY ./data/$settScript .
 
-RUN chmod +x $settScript && ./$settScript && rm ./$settScript
+RUN chmod +x $settScript 
+RUN ./$settScript && rm ./$settScript
 
 
 COPY ./data/hello.py .
